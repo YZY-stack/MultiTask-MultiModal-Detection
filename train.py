@@ -14,8 +14,7 @@ from torch.utils.data import DataLoader
 from torch.utils.data import WeightedRandomSampler
 import numpy as np
 import matplotlib.pyplot as plt
-from cmdd import AudioEncoder, \
-    VideoAudioEncoder, CrossModalContrastiveLearningModel, MLPProjectionHead
+from cmdd import VideoAudioEncoder
 from dataset import VideoAudioDataset
 from metrics import *
 
@@ -31,7 +30,7 @@ label_dict = {
 if __name__ == '__main__':
     # Set hyperparameters
     num_epochs = 10
-    batch_size = 16
+    batch_size = 24
     learning_rate = 0.0001
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print(f"Using device: ", device)
